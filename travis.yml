@@ -1,9 +1,0 @@
-sudo: required
-services:
-  - docker
-
-before_install:
-  - docker build -t akoredeagbomeji/docker-react -f Dockerfile.dev .
-
-script:
-  - docker run -e CI=true akoredeagbomeji/docker-react npm run test
